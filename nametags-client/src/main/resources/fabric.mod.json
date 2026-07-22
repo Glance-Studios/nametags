@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "nametags-client",
+  "version": "${version}",
+  "name": "Nametags (Client)",
+  "description": "Client companion for Nametags. Renders rich over-head nametags from server data. Ships in the modpack.",
+  "authors": ["Glance Studios"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      { "adapter": "kotlin", "value": "dev.nametags.client.NametagsClient" }
+    ]
+  },
+  "mixins": [
+    "nametags-client.mixins.json"
+  ],
+  "depends": {
+    "nametags-api": "*",
+    "fabricloader": ">=0.16",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.13"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "nametags",
+  "version": "${version}",
+  "name": "Nametags",
+  "description": "Server-side nicknames + role prefixes shown in chat, the tablist, and over the head. Players install nothing.",
+  "authors": ["Glance Studios"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      { "adapter": "kotlin", "value": "dev.nametags.NametagsMod" }
+    ]
+  },
+  "mixins": [
+    "nametags.mixins.json"
+  ],
+  "depends": {
+    "nametags-api": "*",
+    "fabricloader": ">=0.16",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.13"
+  }
+}
